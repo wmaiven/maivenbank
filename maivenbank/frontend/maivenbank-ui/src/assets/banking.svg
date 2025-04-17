@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <style>
+    .st0{fill:#F0F0F0;}
+    .st1{fill:#2196F3;}
+    .st2{fill:#FFC107;}
+    .st3{fill:#FFFFFF;}
+    .st4{fill:#455A64;}
+    .st5{fill:#ECEFF1;}
+  </style>
+  <rect class="st0" width="800" height="600"/>
+  <path class="st1" d="M400,100l200,120v240H200V220L400,100z"/>
+  <path class="st2" d="M400,100l-200,120h400L400,100z"/>
+  <rect x="260" y="260" class="st3" width="80" height="120"/>
+  <rect x="460" y="260" class="st3" width="80" height="120"/>
+  <rect x="360" y="260" class="st3" width="80" height="200"/>
+  <rect x="380" y="220" class="st4" width="40" height="40"/>
+  <path class="st5" d="M180,460h440v40H180V460z"/>
+  <circle class="st3" cx="600" cy="180" r="60"/>
+  <path class="st2" d="M600,150l10,20l20,10l-20,10l-10,20l-10-20l-20-10l20-10L600,150z"/>
+  <rect x="340" y="500" class="st4" width="120" height="20"/>
+</svg> 

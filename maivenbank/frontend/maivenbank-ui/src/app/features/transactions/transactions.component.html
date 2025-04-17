@@ -1,0 +1,138 @@
+<h2>Transações</h2>
+
+<div class="row mb-4">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Filtros</h5>
+        <div class="row g-3">
+          <div class="col-md-3">
+            <label for="transaction-type" class="form-label">Tipo</label>
+            <select class="form-select" id="transaction-type">
+              <option value="" selected>Todos</option>
+              <option value="credit">Entradas</option>
+              <option value="debit">Saídas</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="start-date" class="form-label">Data inicial</label>
+            <input type="date" class="form-control" id="start-date">
+          </div>
+          <div class="col-md-3">
+            <label for="end-date" class="form-label">Data final</label>
+            <input type="date" class="form-control" id="end-date">
+          </div>
+          <div class="col-md-3">
+            <label for="search" class="form-label">Busca</label>
+            <input type="text" class="form-control" id="search" placeholder="Buscar...">
+          </div>
+          <div class="col-12 mt-3">
+            <button class="btn btn-primary">Aplicar filtros</button>
+            <button class="btn btn-outline-secondary ms-2">Limpar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header bg-white d-flex justify-content-between align-items-center">
+    <h5 class="mb-0">Histórico de transações</h5>
+    <div>
+      <button class="btn btn-outline-primary btn-sm me-2">Exportar PDF</button>
+      <button class="btn btn-outline-primary btn-sm">Exportar CSV</button>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover mb-0">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Tipo</th>
+          <th class="text-end">Valor</th>
+          <th class="text-end">Saldo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>15/06/2024</td>
+          <td>Supermercado Extra</td>
+          <td>Alimentação</td>
+          <td><span class="badge bg-danger">Saída</span></td>
+          <td class="text-end text-danger">R$ 235,40</td>
+          <td class="text-end">R$ 5.421,50</td>
+        </tr>
+        <tr>
+          <td>12/06/2024</td>
+          <td>Transferência recebida - João Silva</td>
+          <td>Transferência</td>
+          <td><span class="badge bg-success">Entrada</span></td>
+          <td class="text-end text-success">R$ 1.000,00</td>
+          <td class="text-end">R$ 5.656,90</td>
+        </tr>
+        <tr>
+          <td>10/06/2024</td>
+          <td>Netflix</td>
+          <td>Entretenimento</td>
+          <td><span class="badge bg-danger">Saída</span></td>
+          <td class="text-end text-danger">R$ 39,90</td>
+          <td class="text-end">R$ 4.656,90</td>
+        </tr>
+        <tr>
+          <td>08/06/2024</td>
+          <td>Farmácia</td>
+          <td>Saúde</td>
+          <td><span class="badge bg-danger">Saída</span></td>
+          <td class="text-end text-danger">R$ 75,20</td>
+          <td class="text-end">R$ 4.696,80</td>
+        </tr>
+        <tr>
+          <td>05/06/2024</td>
+          <td>Pagamento de salário</td>
+          <td>Salário</td>
+          <td><span class="badge bg-success">Entrada</span></td>
+          <td class="text-end text-success">R$ 4.500,00</td>
+          <td class="text-end">R$ 4.772,00</td>
+        </tr>
+        <tr>
+          <td>03/06/2024</td>
+          <td>Restaurante Bom Gosto</td>
+          <td>Alimentação</td>
+          <td><span class="badge bg-danger">Saída</span></td>
+          <td class="text-end text-danger">R$ 128,00</td>
+          <td class="text-end">R$ 272,00</td>
+        </tr>
+        <tr>
+          <td>01/06/2024</td>
+          <td>Pagamento de conta - Energia Elétrica</td>
+          <td>Contas</td>
+          <td><span class="badge bg-danger">Saída</span></td>
+          <td class="text-end text-danger">R$ 250,00</td>
+          <td class="text-end">R$ 400,00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">
+    <nav aria-label="Paginação de transações">
+      <ul class="pagination justify-content-center mb-0">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" aria-label="Anterior">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Próximo">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

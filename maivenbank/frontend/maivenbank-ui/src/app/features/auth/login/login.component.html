@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-5">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Login</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              id="email" 
+              formControlName="email" 
+              placeholder="seu@email.com"
+              [ngClass]="{'is-invalid': loginForm.get('email')?.invalid && loginForm.get('email')?.touched}"
+            >
+            <div class="invalid-feedback" *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched">
+              Email é obrigatório
+            </div>
+            <div class="invalid-feedback" *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.touched">
+              Digite um email válido
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input 
+              type="password" 
+              class="form-control" 
+              id="password" 
+              formControlName="password"
+              [ngClass]="{'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched}"
+            >
+            <div class="invalid-feedback" *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.touched">
+              Senha é obrigatória
+            </div>
+            <div class="invalid-feedback" *ngIf="loginForm.get('password')?.errors?.['minlength'] && loginForm.get('password')?.touched">
+              A senha deve ter pelo menos 6 caracteres
+            </div>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe" formControlName="rememberMe">
+            <label class="form-check-label" for="rememberMe">Lembrar minha conta</label>
+          </div>
+          <div class="alert alert-danger" *ngIf="errorMessage">
+            {{ errorMessage }}
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid || isSubmitting">
+              <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+              Entrar
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer text-center">
+        <p class="mb-0">Não possui uma conta? <a routerLink="/register">Cadastre-se</a></p>
+      </div>
+    </div>
+  </div>
+</div>
